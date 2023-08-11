@@ -1,41 +1,33 @@
-import { $ } from '@wdio/globals'
-import Page from './page.js';
+class loginPage {
+  constructor() {
+    // super();
+    this.$title = () => $(".login_logo");
+    this.$clickUsername = () => $("#user-name");
+    this.$clickPassword = () => $("#password");
+    this.$clickLogin = () => $("#login-button");
+    this.$checkTitle = () => $(".app_logo");
+  };
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
-class LoginPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
-    get inputUsername () {
-        return $('#username');
-    }
+  /**
+   * 
+   * @param {string} url 
+   */
+  async openUrl(url) {
+    await browser.maximizeWindow();
+    await browser.url(url);
+  };
 
-    get inputPassword () {
-        return $('#password');
-    }
-
-    get btnSubmit () {
-        return $('button[type="submit"]');
-    }
-
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    async login (username, password) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
-    }
-
-    /**
-     * overwrite specific options to adapt it to page object
-     */
-    open () {
-        return super.open('login');
-    }
-}
-
-export default new LoginPage();
+  /**
+   * 
+   * @param {string} string1 
+   * @param {string} string2 
+   */
+  async login(string1, string2) {
+    await this.$clickUsername().click();
+    await this.$clickUsername().setValue(string1);
+    await this.$clickPassword().click();
+    await this.$clickPassword().setValue(string2);
+    await this.$clickLogin().click();
+  };
+};
+export default new loginPage();
