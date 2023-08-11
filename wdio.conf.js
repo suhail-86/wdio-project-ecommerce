@@ -101,7 +101,7 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: [],
+    services: ['chromedriver'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -123,9 +123,15 @@ export const config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
-
+    reporters: ['spec'
     
+    // ['junit', {
+    //     outputDir: './',
+    //     outputFileFormat: function(options) { // optional
+    //         return `results-${options.cid}.${options.capabilities}.xml`
+    //     }
+    // }]
+], 
     //
     // Options to be passed to Jasmine.
     jasmineOpts: {
