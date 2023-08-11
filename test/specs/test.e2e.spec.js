@@ -1,15 +1,26 @@
-import { expect } from '@wdio/globals'
-import LoginPage from '../pageobjects/login.page.js'
-import SecurePage from '../pageobjects/secure.page.js'
+import loginPage from "../pageobjects/login.page.js";
+import addToCart from "../pageobjects/add.cart.js";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const testData = require("../test-data/testdata.json");
+describe("Login with valid credential ", () => {
 
-describe('My Login application', () => {
-    it('should login with valid credentials', async () => {
-        await LoginPage.open()
+  it("Launch the URL", async () => {
+    await loginPage.openUrl(testData.suasdemo);
+    expect(await loginPage.$title()).toHaveTitle("Swag Labs");
+  });
 
-        await LoginPage.login('tomsmith', 'SuperSecretPassword!')
-        await expect(SecurePage.flashAlert).toBeExisting()
-        await expect(SecurePage.flashAlert).toHaveTextContaining(
-            'You logged into a secure area!')
-    })
-})
+  it("Enter valid credentials", async () => {
+    await loginPage.login(testData.username, testData.password);
+    expect(await loginPage.$checkTitle()).toHaveTitle("Swag Labs");
+  });
 
+});
+
+describe("Add product to the cart", () => {
+
+  it("Sort the items listed", async () => {
+    await addToCart.select();
+  });
+
+});
