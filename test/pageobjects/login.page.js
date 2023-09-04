@@ -1,4 +1,4 @@
-class loginPage {
+class LoginPage {
   constructor() {
     // super();
     this.$title = () => $(".login_logo");
@@ -7,14 +7,15 @@ class loginPage {
     this.$clickLogin = () => $("#login-button");
     this.$checkTitle = () => $(".app_logo");
   };
-
+  // "type": "module",
   /**
    * 
    * @param {string} url 
    */
-  async openUrl(url) {
-    await browser.maximizeWindow();
-    await browser.url(url);
+
+    async openUrl(url) {
+      await browser.maximizeWindow();
+      await browser.url(url);
   };
 
   /**
@@ -30,4 +31,7 @@ class loginPage {
     await this.$clickLogin().click();
   };
 };
-export default new loginPage();
+// export default new loginPage();
+module.exports = {
+  homePage: new LoginPage(),
+};
