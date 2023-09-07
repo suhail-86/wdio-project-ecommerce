@@ -1,28 +1,28 @@
-// const Common = require ("./common.js");
+const Common = require ("./common.js");
 const listedPrices = [];
-let cleanedPrices;
-class cartPage  {
+let array = [];
+class cartPage extends Common  {
   constructor() {
-    // super();
+    super();
     this.$item1 = () => $("#add-to-cart-sauce-labs-backpack");
-    this.$sortItem = () => $('.product_sort_container');
+    this.$sortItemMenu = () => $('.product_sort_container');
     this.$sortAsPrice = () => $('.product_sort_container').shadow$('//option[@value="lohi"]');
     this.$$priceElements = () => $$('.inventory_item_price');
 
   };
 
   async sortPrice() {
-    await this.$sortItem().click();
-    await this.$sortAsPrice().waitForDisplayed();
-    await this.$sortAsPrice().click();
+    await this.$sortItemMenu().click();
+    await this.$sortItemMenu().selectByAttribute('value','lohi');
     await browser.pause (3000);
-    for (const element of priceElements) {
-        const priceText = await element.getText();
-        cleanedPrices = priceText.map(price => price.replace(/[^0-9.]/g, ''));
-        listedPrices.push(cleanedPrices);
-        console.log(cleanedPrices)
+    for (const $element of await this.$$priceElements()) {
+        let b = await $element.getText();
+        let price = b.replace(/\D/g, "");
+        array.push(price);
+        console.log(array)
       }
-      return this.isDecenting(listedPrices);  };
+      return this.isAscending(array);  
+    };
     };
 
 

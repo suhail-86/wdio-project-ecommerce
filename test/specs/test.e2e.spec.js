@@ -19,7 +19,7 @@ describe("Add product to the cart", () => {
 
   it("Sort the price of the items", async () => {
     await addToCart.sortPrice();
-    expect (await addToCart.sortingarray()).toBeDisplayed().toBe(false);
+    expect (await addToCart.sortPrice()).toBe(false);
   });
 
 });
