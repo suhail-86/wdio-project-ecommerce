@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Login with valid credential" timestamp="2023-09-07T19:18:47" time="2.673" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Login with valid credential "/>
+      <property name="capabilities" value="chrome.116_0_5845_179.windows"/>
+      <property name="file" value="file:///C:/Users/hp/Desktop/wdio-project-ecommerce/test/specs/test.e2e.spec.js"/>
+    </properties>
+    <testcase classname="chrome.116_0_5845_179.windows.Login_with_valid_credential_" name="Launch the URL" time="1.34">
+      <system-out><![CDATA[
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/url - {"url":"https://www.saucedemo.com/"}
+RESULT: {"url":"https://www.saucedemo.com/"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element - {"using":"css selector","value":".login_logo"}
+RESULT: {"using":"css selector","value":".login_logo"}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/title - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.116_0_5845_179.windows.Login_with_valid_credential_" name="Enter valid credentials" time="1.327">
+      <system-out><![CDATA[
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element - {"using":"css selector","value":"#user-name"}
+RESULT: {}
+RESULT: {"using":"css selector","value":"#user-name"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_11/click - {}
+RESULT: {}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element - {"using":"css selector","value":"#user-name"}
+RESULT: {"using":"css selector","value":"#user-name"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_11/clear - {}
+RESULT: {}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_11/value - {"text":"standard_user"}
+RESULT: {"text":"standard_user"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element - {"using":"css selector","value":"#password"}
+RESULT: {"using":"css selector","value":"#password"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_2/click - {}
+RESULT: {}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element - {"using":"css selector","value":"#password"}
+RESULT: {"using":"css selector","value":"#password"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_2/clear - {}
+RESULT: {}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_2/value - {"text":"secret_sauce"}
+RESULT: {"text":"secret_sauce"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element - {"using":"css selector","value":"#login-button"}
+RESULT: {"using":"css selector","value":"#login-button"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_5/click - {}
+RESULT: {}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element - {"using":"css selector","value":".app_logo"}
+RESULT: {"using":"css selector","value":".app_logo"}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/title - {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="Add product to the cart" timestamp="2023-09-07T19:18:50" time="7.53" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Add product to the cart"/>
+      <property name="capabilities" value="chrome.116_0_5845_179.windows"/>
+      <property name="file" value="file:///C:/Users/hp/Desktop/wdio-project-ecommerce/test/specs/test.e2e.spec.js"/>
+    </properties>
+    <testcase classname="chrome.116_0_5845_179.windows.Add_product_to_the_cart" name="Sort the price of the items" time="7.529">
+      <system-out><![CDATA[
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element - {"using":"css selector","value":".product_sort_container"}
+RESULT: {}
+RESULT: {"using":"css selector","value":".product_sort_container"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_16/click - {}
+RESULT: {}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element - {"using":"css selector","value":".product_sort_container"}
+RESULT: {"using":"css selector","value":".product_sort_container"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_16/element - {"using":"xpath","value":"./option[normalize-space(@value) = \"lohi\"]|./optgroup/option[normalize-space(@value) = \"lohi\"]"}
+RESULT: {"using":"xpath","value":"./option[normalize-space(@value) = \"lohi\"]|./optgroup/option[normalize-space(@value) = \"lohi\"]"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_25/click - {}
+RESULT: {}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/elements - {"using":"css selector","value":".inventory_item_price"}
+RESULT: {"using":"css selector","value":".inventory_item_price"}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_32/text - {}
+RESULT: {}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_33/text - {}
+RESULT: {}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_34/text - {}
+RESULT: {}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_35/text - {}
+RESULT: {}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_36/text - {}
+RESULT: {}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_37/text - {}
+RESULT: {}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element - {"using":"css selector","value":".product_sort_container"}
+RESULT: {"using":"css selector","value":".product_sort_container"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_31/click - {}
+RESULT: {}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element - {"using":"css selector","value":".product_sort_container"}
+RESULT: {"using":"css selector","value":".product_sort_container"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_31/element - {"using":"xpath","value":"./option[normalize-space(@value) = \"lohi\"]|./optgroup/option[normalize-space(@value) = \"lohi\"]"}
+RESULT: {"using":"xpath","value":"./option[normalize-space(@value) = \"lohi\"]|./optgroup/option[normalize-space(@value) = \"lohi\"]"}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_40/click - {}
+RESULT: {}
+COMMAND: POST /session/dd58c16bb34add873fa8d301022c191b/elements - {"using":"css selector","value":".inventory_item_price"}
+RESULT: {"using":"css selector","value":".inventory_item_price"}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_32/text - {}
+RESULT: {}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_33/text - {}
+RESULT: {}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_34/text - {}
+RESULT: {}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_35/text - {}
+RESULT: {}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_36/text - {}
+RESULT: {}
+COMMAND: GET /session/dd58c16bb34add873fa8d301022c191b/element/1A778D7BBAA295350C262646297BEC02_element_37/text - {}
+RESULT: {}
+COMMAND: DELETE /session/dd58c16bb34add873fa8d301022c191b - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
